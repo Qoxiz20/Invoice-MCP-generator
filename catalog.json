@@ -1,0 +1,428 @@
+{
+  "currency": "RM",
+  "tier_basis": "unit",
+  "generated_from": "Product_Details_for_AI.xlsx",
+  "items": [
+    {
+      "barcode": "9551029670008",
+      "product_name": "Henesys Button Mushroom",
+      "weight_size": "425g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670015",
+      "product_name": "Henesys Straw Mushroom",
+      "weight_size": "425g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670022",
+      "product_name": "Henesys Abalone Mushroom",
+      "weight_size": "425g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670039",
+      "product_name": "Henesys Bailing Mushroom",
+      "weight_size": "850g x 12's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670046",
+      "product_name": "Henesys King Lychee",
+      "weight_size": "567g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670053",
+      "product_name": "Henesys Lychee",
+      "weight_size": "567g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670060",
+      "product_name": "Henesys King Longan",
+      "weight_size": "567g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670077",
+      "product_name": "Henesys Young Corn Cut",
+      "weight_size": "425g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670084",
+      "product_name": "Henesys Young Corn Whole",
+      "weight_size": "425g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670091",
+      "product_name": "Henesys Red Kidney Bean",
+      "weight_size": "425g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670107",
+      "product_name": "Henesys Pickled Lettuce",
+      "weight_size": "182g x 48's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670114",
+      "product_name": "Henesys Braised Peanut",
+      "weight_size": "170g x 48's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670121",
+      "product_name": "Henesys Water Chestnuts",
+      "weight_size": "565g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670145",
+      "product_name": "Henesys Cream Corn",
+      "weight_size": "425g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670152",
+      "product_name": "Henesys Kernel Corn",
+      "weight_size": "425g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670312",
+      "product_name": "Henesys Green Peas",
+      "weight_size": "425g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670336",
+      "product_name": "Henesys Fruit Cocktail",
+      "weight_size": "850g x 12's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670343",
+      "product_name": "Henesys Peach Halves",
+      "weight_size": "820g x 12's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670138",
+      "product_name": "Nautilus Sardines in Tomato Sauce",
+      "weight_size": "425g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670169",
+      "product_name": "Nautilus Sardines in Tomato Sauce",
+      "weight_size": "155g x 50's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670176",
+      "product_name": "Nautilus Fried Dace Black Bean",
+      "weight_size": "184g x 24's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670183",
+      "product_name": "Litohabo MSG",
+      "weight_size": "25kg",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": null,
+      "product_name": "Litohabo Tapioca Starch",
+      "weight_size": "30kg",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_barcode",
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "9551029670220",
+      "product_name": "Litohabo Refined Salt",
+      "weight_size": "350g x 50's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": null,
+      "product_name": "Royal Lion Potato Starch",
+      "weight_size": "25kg",
+      "pricing": {
+        "1-3_unit": 160,
+        "4-10_unit": 155,
+        "11-20_unit": 150,
+        "21-49_unit": 145,
+        "50_unit_plus": 140
+      },
+      "needs_review": [
+        "missing_barcode"
+      ]
+    },
+    {
+      "barcode": "8850487037172",
+      "product_name": "Maepranom Thai Chilli Sauce",
+      "weight_size": "980g x 12's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "8850487037189",
+      "product_name": "Maepranom Thai Chilli Sauce",
+      "weight_size": "5kg x 3's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    },
+    {
+      "barcode": "8850487003108",
+      "product_name": "Maepranom Tomyam Paste",
+      "weight_size": "3kg x 6's",
+      "pricing": {
+        "1-3_unit": null,
+        "4-10_unit": null,
+        "11-20_unit": null,
+        "21-49_unit": null,
+        "50_unit_plus": null
+      },
+      "needs_review": [
+        "missing_prices"
+      ]
+    }
+  ]
+}

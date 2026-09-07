@@ -1,0 +1,26 @@
+{
+  "name": "invoice-generator",
+  "version": "1.0.0",
+  "description": "LHG Import Export Hub - WhatsApp order invoice automation (Phase 2: invoice generator) + MCP server with real OAuth on Vercel",
+  "main": "generate-invoice.js",
+  "scripts": {
+    "generate": "node generate-invoice.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "dotenv": "^16.4.5",
+    "googleapis": "^144.0.0",
+    "jose": "^5.9.6",
+    "mcp-handler": "^2.0.0",
+    "next": "^15.0.0",
+    "puppeteer": "^22.15.0",
+    "zod": "^4.2.0"
+  },
+  "devDependencies": {
+    "vercel": "^37.0.0"
+  }
+}
