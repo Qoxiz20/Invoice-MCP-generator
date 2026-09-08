@@ -58,17 +58,6 @@ console.log('GOOGLE_OAUTH_CLIENT_SECRET present:', !!process.env.GOOGLE_OAUTH_CL
   const googleCallbackUri = `${getIssuer()}/api/oauth/google/callback`;
   const googleAuthUrl = buildGoogleAuthUrl({ state: relayState, redirectUri: googleCallbackUri });
 
-return new Response(
-  JSON.stringify({
-    googleClientIdPresent: !!process.env.GOOGLE_OAUTH_CLIENT_ID,
-    googleClientIdPrefix: process.env.GOOGLE_OAUTH_CLIENT_ID?.slice(0, 15),
-    googleClientSecretPresent: !!process.env.GOOGLE_OAUTH_CLIENT_SECRET,
-    googleRedirectUri: googleCallbackUri,
-  }),
-  {
-    headers: { 'Content-Type': 'application/json' },
-  }
-);
 
 
   return Response.redirect(googleAuthUrl, 302);
