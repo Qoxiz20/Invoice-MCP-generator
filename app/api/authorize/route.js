@@ -51,7 +51,7 @@ export async function GET(request) {
 
 
 console.log('GOOGLE_OAUTH_CLIENT_ID present:', !!process.env.GOOGLE_OAUTH_CLIENT_ID);
-console.log('GOOGLE_OAUTH_CLIENT_ID prefix:', process.env.GOOGLE_OAUTH_CLIENT_ID?.slice(0, 12));
+console.log('GOOGLE_OAUTH_CLIENT_ID prefix:', process.env.GOOGLE_OAUTH_CLIENT_ID);
 console.log('GOOGLE_OAUTH_CLIENT_SECRET present:', !!process.env.GOOGLE_OAUTH_CLIENT_SECRET);
 
 
