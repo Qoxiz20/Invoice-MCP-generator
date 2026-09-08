@@ -59,7 +59,7 @@ console.log('GOOGLE_OAUTH_CLIENT_SECRET present:', !!process.env.GOOGLE_OAUTH_CL
   const googleAuthUrl = buildGoogleAuthUrl({ state: relayState, redirectUri: googleCallbackUri });
 
 
-
+console.log('GOOGLE AUTH URL:', googleAuthUrl);
   return Response.redirect(googleAuthUrl, 302);
 }
 
