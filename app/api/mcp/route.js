@@ -38,7 +38,16 @@ async function verifyToken(req, bearerToken) {
 
   try {
     const payload = await verifyAccessToken(bearerToken);
+
+    console.log('verifyToken SUCCESS:', {
+      sub: payload.sub,
+      scope: payload.scope,
+      aud: payload.aud,
+      iss: payload.iss,
+    });
+
     const scopes = typeof payload.scope === 'string' ? payload.scope.split(' ') : [];
+
     return {
       token: bearerToken,
       scopes,
@@ -46,7 +55,7 @@ async function verifyToken(req, bearerToken) {
       extra: { email: payload.sub },
     };
   } catch (err) {
-    // Invalid signature, wrong audience, expired, wrong issuer - all land here.
+    console.error('verifyToken FAILED:', err?.message || err);
     return undefined;
   }
 }
