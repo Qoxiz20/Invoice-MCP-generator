@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Official Receipt {{OR_NUMBER}}</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #1a1a1a;
+    font-size: 13px;
+    padding: 40px;
+  }
+  .invoice-box { max-width: 800px; margin: auto; }
+  .header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    border-bottom: 3px solid #1a1a1a; padding-bottom: 20px; margin-bottom: 25px;
+  }
+  .company-info { display: flex; align-items: center; gap: 15px; }
+  .company-info img { height: 60px; width: auto; }
+  .company-details h1 { font-size: 18px; letter-spacing: 0.5px; }
+  .company-details p { font-size: 11px; color: #555; line-height: 1.5; margin-top: 4px; }
+  .invoice-title { text-align: right; }
+  .invoice-title h2 { font-size: 26px; color: #1a1a1a; letter-spacing: 1px; }
+  .invoice-title p { font-size: 11px; color: #555; margin-top: 4px; }
+  .meta-section { display: flex; justify-content: space-between; margin-bottom: 30px; }
+  .bill-to h3 { font-size: 11px; text-transform: uppercase; color: #888; margin-bottom: 6px; letter-spacing: 0.5px; }
+  .bill-to p { font-size: 13px; line-height: 1.6; }
+  .invoice-meta { text-align: right; font-size: 12px; line-height: 1.8; }
+  .invoice-meta span { color: #888; margin-right: 10px; }
+  table.items { width: 100%; border-collapse: collapse; margin-bottom: 25px; }
+  table.items thead tr { background: #1a1a1a; color: #fff; }
+  table.items th { text-align: left; padding: 10px 12px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  table.items th.num, table.items td.num { text-align: right; }
+  table.items tbody tr { border-bottom: 1px solid #e5e5e5; }
+  table.items td { padding: 10px 12px; font-size: 13px; }
+  .totals { width: 280px; margin-left: auto; margin-bottom: 30px; }
+  .totals table { width: 100%; }
+  .totals td { padding: 6px 12px; font-size: 13px; }
+  .totals tr.grand-total td { border-top: 2px solid #1a1a1a; font-size: 15px; font-weight: bold; padding-top: 10px; }
+  .totals td.label { color: #555; }
+  .totals td.value { text-align: right; }
+  .footer { border-top: 1px solid #e5e5e5; padding-top: 15px; font-size: 11px; color: #888; line-height: 1.6; }
+  .footer .thanks { font-size: 13px; color: #1a1a1a; margin-bottom: 8px; font-weight: 600; }
+  .paid-stamp {
+    display: inline-block; border: 3px solid #2e7d32; color: #2e7d32;
+    font-size: 20px; font-weight: bold; letter-spacing: 3px; padding: 6px 20px;
+    transform: rotate(-8deg); margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="invoice-box">
+
+  <div class="header">
+    <div class="company-info">
+      <div class="company-details">
+        <h1>LHG IMPORT EXPORT HUB SDN BHD</h1>
+        <p>
+          Block 5, Lot 20, Lorong Buah Duku 4, Kolombong Light Industrial,<br>
+          Mile 6, Inanam, 88450 Kota Kinabalu, Sabah, Malaysia<br>
+          Tel: +60 16-818 9180 &nbsp;|&nbsp; Email: Lhgimpexhub20@gmail.com<br>
+          Company Reg No: 1683320-W
+        </p>
+      </div>
+    </div>
+    <div class="invoice-title">
+      <h2>OFFICIAL RECEIPT</h2>
+      <p>Original</p>
+    </div>
+  </div>
+
+  <div class="meta-section">
+    <div class="bill-to">
+      <h3>Received From</h3>
+      <p>
+        {{CUSTOMER_NAME}}<br>
+        {{CUSTOMER_ADDRESS}}<br>
+        {{CUSTOMER_PHONE}}
+      </p>
+    </div>
+    <div class="invoice-meta">
+      <div><span>OR No:</span>{{OR_NUMBER}}</div>
+      <div><span>Date:</span>{{OR_DATE}}</div>
+      <div><span>Against Invoice:</span>{{SAL_REFERENCE}}</div>
+      <div><span>Transaction ID:</span>{{TRX_ID}}</div>
+    </div>
+  </div>
+
+  <div class="paid-stamp">PAID</div>
+
+  <table class="items">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Description</th>
+        <th class="num">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ITEMS_ROWS}}
+    </tbody>
+  </table>
+
+  <div class="totals">
+    <table>
+      <tr class="grand-total">
+        <td class="label">Amount Received</td>
+        <td class="value">{{CURRENCY}} {{GRAND_TOTAL}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="footer">
+    <p class="thanks">Thank you for your payment!</p>
+    <p>
+      This receipt confirms payment has been matched against our bank statement.
+      For inquiries, please contact us at Lhgimpexhub20@gmail.com or +60 16-818 9180.
+      This is a computer-generated receipt.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
