@@ -55,11 +55,20 @@ function bufferToStream(buffer) {
 
 async function sendTelegramMessage(chatId, text) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
-  await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+  const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ chat_id: chatId, text }),
   });
+  const data = await res.json();
+  if (!data.ok) {
+    // This used to fail completely silently - fetch() only throws on a
+    // genuine network error, never on Telegram rejecting the request
+    // (bad token, bad chat_id, etc.) with a normal HTTP response. Log it
+    // loudly so a broken outbound message is never invisible again.
+    console.error('[telegram] sendMessage FAILED:', JSON.stringify(data));
+  }
+  return data;
 }
 
 /**
@@ -110,6 +119,7 @@ export async function POST(request) {
   }
 
   const chatId = message.chat.id;
+  console.log('[webhook] Received message from chatId:', chatId, 'text:', message.text);
 
   try {
     const doc = message.document;
@@ -117,24 +127,21 @@ export async function POST(request) {
     const text = message.text;
 
     if (!doc && !photo && text) {
-      // Check for a pending TRX confirmation FIRST - resolving a plain
-      // yes/no/correction is cheap deterministic code, no AI call needed
-      // at all. Only falls through to the brain if this doesn't look
-      // like a reply to a pending proposal.
+      console.log('[webhook] Checking for pending confirmation...');
       const pending = await getPendingConfirmation(chatId);
+      console.log('[webhook] Pending confirmation result:', pending ? 'FOUND' : 'none');
       if (pending) {
         const resolved = await tryResolvePendingConfirmation(pending, text, chatId);
         if (resolved) return Response.json({ ok: true });
-        // else: didn't look like a confirmation reply - fall through to normal handling below
       }
 
-      // Real text - route it through the brain. The brain can both
-      // investigate read-only AND process/issue orders (for registered,
-      // trusted customers only) - see rulebook.js for exactly what it's
-      // allowed to decide vs. what it must always look up.
+      console.log('[webhook] Sending "On it" acknowledgement...');
       await sendTelegramMessage(chatId, 'On it - give me a moment to look...');
+      console.log('[webhook] Calling askBrain...');
       const answer = await askBrain(text, message.from.id);
+      console.log('[webhook] askBrain returned, length:', answer?.length, 'preview:', answer?.slice(0, 100));
       await sendTelegramMessage(chatId, answer);
+      console.log('[webhook] Final reply sent.');
       return Response.json({ ok: true });
     }
 
@@ -158,11 +165,13 @@ export async function POST(request) {
 
     return Response.json({ ok: true });
   } catch (err) {
-    console.error('Telegram webhook error:', err);
+    console.error('[webhook] CAUGHT ERROR:', err);
+    console.error('[webhook] Error message:', err?.message);
+    console.error('[webhook] Error stack:', err?.stack);
     try {
-      await sendTelegramMessage(chatId, `Something went wrong saving that file: ${err.message}`);
-    } catch (_) {
-      // best-effort notification only
+      await sendTelegramMessage(chatId, `Something went wrong: ${err.message}`);
+    } catch (sendErr) {
+      console.error('[webhook] Even the error-notification reply failed:', sendErr);
     }
     // Always 200 to Telegram, or it will retry aggressively
     return Response.json({ ok: true });
